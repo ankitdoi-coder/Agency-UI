@@ -1,0 +1,238 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container / Navbar */
+.container {
+  background: linear-gradient(90deg, #00b894, #0984e3);
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #ffeaa7;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  font-size: 28px;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+.hamburger:hover {
+  color: #ffeaa7;
+}
+
+/* Navbar */
+.navbar {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+  transition: max-height 0.3s ease;
+}
+
+/* Nav Items as Boxes */
+.box {
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(120,120,220,0.25);
+  user-select: none;
+}
+.box:hover {
+  background: linear-gradient(135deg, #55efc4, #81ecec);
+  color: #2d3436;
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(50,200,150,0.5);
+}
+
+/* Main Sections */
+.section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px 25px;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+}
+.section:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Section Headings */
+.section h2 {
+  font-size: 30px;
+  color: #0984e3;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 3px solid #00cec9;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+/* Section Paragraph */
+.section p {
+  font-size: 18px;
+  color: #2d3436;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* Special Background for About Us */
+#about {
+  background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+  box-shadow: 0 8px 25px rgba(255, 180, 150, 0.35);
+}
+
+/* Contact List Styling */
+#contact ul {
+  margin-top: 15px;
+  list-style: none;
+  font-size: 18px;
+  color: #2d3436;
+  padding-left: 0;
+}
+#contact ul li {
+  margin: 10px 0;
+  font-weight: 600;
+}
+#contact ul li strong {
+  color: #d63031;
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Product Cards */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 250px;
+  padding: 20px 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.product-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #0984e3;
+  font-weight: 700;
+}
+.product-card p {
+  font-size: 14px;
+  color: #636e72;
+  margin-bottom: 15px;
+}
+
+/* Order Button */
+.order-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #fd79a8, #d63031);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255, 105, 135, 0.6);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+.order-btn:hover {
+  background: linear-gradient(135deg, #e84393, #b71540);
+  box-shadow: 0 8px 28px rgba(184, 21, 64, 0.85);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .product-grid {
+    justify-content: center;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .box {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px 10px;
+    border-radius: 12px;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    padding: 30px 20px;
+    margin: 30px 15px;
+  }
+}
